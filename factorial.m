@@ -1,16 +1,16 @@
-clear all
-clc
+clear all;
+clc;
 
-num=input('Introduzca un número entero:);
+num=input('Introduzca un número entero:');
 
-factorial=1
-
-for i=1:num-1
-    factorial=factorial*i
-end
+fact=1;
 
 if num>=0
-    disp('El factorial de' num2str(num) 'es:' factorial)
+    for i=1:num
+        fact=fact*i;
+    end
+
+    disp(['El factorial de ', num2str(num), ' es: ', num2str(fact)])
 else
-    disp(['El factorial de',num,'es:',factorial])
+    disp('Los numeros negativos no tienen factorial')
 end
